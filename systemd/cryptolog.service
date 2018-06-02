@@ -1,0 +1,9 @@
+[Unit]
+Description=cryptolog
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+PIDFile=/var/run/cryptolog.pid
+WorkingDirectory=/opt/cryptolog
+ExecStart=/opt/cryptolog/cryptolog.rb
